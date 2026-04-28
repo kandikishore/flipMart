@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chor Bazaar | Flights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="category" data-category="flights">
+    <header class="header">
+        <nav class="main">
+            <a class="brand-link" href="index.html" aria-label="Chor Bazaar home">
+                <div class="side">
+                    <h1>Chor Bazaar</h1>
+                    <p>Smart deals for every cart</p>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navPanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-panel" id="navPanel">
+                
+                <div class="search">
+                    <form action="#" id="searchForm">
+                        <input id="searchInput" type="text" placeholder="Search travel deals..." aria-label="Search travel deals">
+                        <button type="submit" aria-label="Search travel deals">Search</button>
+                    </form>
+                </div>
+                <div class="right">
+                    <a class="cart-button" href="index.html">Home</a>
+                    <button type="button" class="login-button">Login</button>
+                    <a class="cart-button" href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="categories compact-categories">
+            <a class="category-card" data-nav="minutes" href="minutes.html"><img src="cat m 1.webp" alt="Minutes"><p>Minutes</p></a>
+            <a class="category-card" data-nav="mobiles" href="mobiles.html"><img src="cat mobile.webp" alt="Mobiles"><p>Mobiles</p></a>
+            <a class="category-card" data-nav="fashion" href="fashion.html"><img src="cat fashion.webp" alt="Fashion"><p>Fashion</p></a>
+            <a class="category-card" data-nav="electronics" href="electronics.html"><img src="cat ele.jpg" alt="Electronics"><p>Electronics</p></a>
+            <a class="category-card" data-nav="appliances" href="appliances.html"><img src="cat app.webp" alt="Appliances"><p>Appliances</p></a>
+            <a class="category-card" data-nav="furniture" href="furniture.html"><img src="cat furniture.webp" alt="Furniture"><p>Furniture</p></a>
+            <a class="category-card" data-nav="flights" href="flights.html"><img src="cat flight.webp" alt="Flights"><p>Flights</p></a>
+            <a class="category-card" data-nav="grocery" href="grocery.html"><img src="cat glocery.webp" alt="Grocery"><p>Grocery</p></a>
+        </section>
+
+        <section class="catalog-hero" id="categoryHero"></section>
+
+        <section class="catalog-shell">
+            <aside class="filters-panel">
+                <h3>Filter &amp; Sort</h3>
+                <label for="sortSelect">Sort by</label>
+                <select id="sortSelect">
+                    <option value="featured">Featured</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating-desc">Rating</option>
+                </select>
+
+                <label for="priceFilter">Price range</label>
+                <select id="priceFilter">
+                    <option value="all">All Prices</option>
+                    <option value="0-500">Up to Rs 500</option>
+                    <option value="501-1000">Rs 501 - Rs 1000</option>
+                    <option value="1001-5000">Rs 1001 - Rs 5000</option>
+                    <option value="5001-plus">Above Rs 5000</option>
+                </select>
+
+                <label for="ratingFilter">Minimum rating</label>
+                <select id="ratingFilter">
+                    <option value="all">All Ratings</option>
+                    <option value="4.5">4.5 and above</option>
+                    <option value="4">4 and above</option>
+                    <option value="3.5">3.5 and above</option>
+                </select>
+            </aside>
+
+            <div class="catalog-content">
+                <div class="catalog-topbar">
+                    <div>
+                        <h2 id="catalogTitle">Flight Deals</h2>
+                        <p id="resultsMeta">Loading products...</p>
+                    </div>
+                </div>
+                <div class="product-grid catalog-grid" id="productGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
