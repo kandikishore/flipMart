@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chor Bazaar | Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cart">
+    <header class="header">
+        <nav class="main">
+            <a class="brand-link" href="index.html" aria-label="Chor Bazaar home">
+                <div class="side">
+                    <h1>Chor Bazaar</h1>
+                    <p>Smart deals for every cart</p>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navPanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-panel" id="navPanel">
+                
+                <div class="search">
+                    <form action="#" id="searchForm">
+                        <input id="searchInput" type="text" placeholder="Search cart items..." aria-label="Search cart items">
+                        <button type="submit" aria-label="Search cart items">Search</button>
+                    </form>
+                </div>
+                <div class="right">
+                    <a class="cart-button" href="index.html">Home</a>
+                    <button type="button" class="login-button">Login</button>
+                    <a class="cart-button active" href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="catalog-hero cart-hero">
+            <div class="hero-copy">
+                <span class="hero-tag">Saved in localStorage</span>
+                <h2>Your Cart</h2>
+                <p>Review items, change quantities, remove products and track the final total before checkout.</p>
+            </div>
+            <a class="cta-button" href="index.html">Continue Shopping</a>
+        </section>
+
+        <section class="cart-layout">
+            <div class="cart-list-panel">
+                <div class="catalog-topbar">
+                    <div>
+                        <h2>Cart Items</h2>
+                        <p id="cartMeta">Loading your cart...</p>
+                    </div>
+                </div>
+                <div class="cart-items" id="cartItems"></div>
+            </div>
+
+            <aside class="cart-summary">
+                <h3>Price Details</h3>
+                <div class="summary-row">
+                    <span>Items</span>
+                    <strong id="summaryItems">0</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Total Quantity</span>
+                    <strong id="summaryQuantity">0</strong>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total Price</span>
+                    <strong id="summaryTotal">Rs 0</strong>
+                </div>
+                <button type="button" class="cta-button full-width">Proceed to Checkout</button>
+            </aside>
+        </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
